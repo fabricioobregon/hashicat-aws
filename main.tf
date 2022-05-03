@@ -113,6 +113,7 @@ resource "aws_eip" "hashicat" {
   vpc      = true
 }
 
+
 resource "aws_eip_association" "hashicat" {
   instance_id   = aws_instance.hashicat.id
   allocation_id = aws_eip.hashicat.id
